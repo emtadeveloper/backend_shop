@@ -1,4 +1,4 @@
-import ICoupon from "src/components/coupon/model/ICoupon";
+import ICoupon from "src/components/Coupon/model/ICoupon";
 import IUser from "src/components/users/model/IUser";
 
 interface CouponHandler {

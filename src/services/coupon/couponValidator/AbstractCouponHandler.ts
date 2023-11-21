@@ -1,6 +1,6 @@
-import ICoupon from "src/components/coupon/model/ICoupon";
 import IUser from "src/components/users/model/IUser";
 import CouponHandler from "./CouponHandler";
+import ICoupon from "src/components/Coupon/model/ICoupon";
 
 abstract class AbstractCouponHandler implements CouponHandler{
   private nextHandler: CouponHandler;

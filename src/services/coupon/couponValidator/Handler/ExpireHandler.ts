@@ -2,13 +2,13 @@ import ICoupon from "src/components/Coupon/model/ICoupon";
 import AbstractCouponHandler from "../AbstractCouponHandler";
 import IUser from "src/components/users/model/IUser";
 
-abstract class UserHandler extends AbstractCouponHandler {
+abstract class ExpireHandler extends AbstractCouponHandler {
   public process(user: IUser, coupon: ICoupon): ICoupon | null {
-    const { userConstraint } = coupon.constraints;
-    if (user.id !== userConstraint.id) {
-      throw new Error("این کد تخفیف برای کاربری شما صادر شده است");
+    const now = new Date();
+    if (now > coupon.expires_at) {
+      throw new Error("این کد تخفیف در این تاریخ به پایان رسیده است");
     }
     return super.process(user, coupon);
   }
 }
-export default UserHandler;
+export default ExpireHandler;
