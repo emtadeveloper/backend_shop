@@ -7,5 +7,6 @@ export default interface IUser extends Document {
   mobile: string;
   total_orders: number;
   wallet: number;
+  addresses: [Object];
   create_at?: Date;
 }
