@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-vars */
 enum CouponStatus {
-    ACTIVE,
-    INACTIVE
+  ACTIVE,
+  INACTIVE,
 }
-
-export default CouponStatus
+export default CouponStatus;
